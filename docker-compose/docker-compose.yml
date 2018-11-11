@@ -35,8 +35,8 @@ services:
       - "9992:5000"
     expose:
       - "5000"
-    depends_on:
-      - be
+    # depends_on:
+    #   - be
     environment:
       - REACT_APP_API_ENDPOINT=http://localhost:9991
     restart: always
