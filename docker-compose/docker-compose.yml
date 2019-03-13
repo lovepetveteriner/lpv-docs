@@ -15,18 +15,18 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
-  be:
-    image: lovepetveteriner/be
+  lpv-adb-be:
+    image: lovepetveteriner/lpv-adb-be
     ports:
       - "9991:8080"
     expose:
       - "8080"
-    depends_on:
-      - db
-    environment:
-      - JDBC_DATABASE_URL=jdbc:postgresql://db:5432/postgres
-      - JDBC_DATABASE_USERNAME=postgres
-      - JDBC_DATABASE_PASSWORD=lpvpass
+    # depends_on:
+    #   - db
+    # environment:
+    #   - JDBC_DATABASE_URL=jdbc:postgresql://db:5432/postgres
+    #   - JDBC_DATABASE_USERNAME=postgres
+    #   - JDBC_DATABASE_PASSWORD=lpvpass
     restart: always
 
   ui:

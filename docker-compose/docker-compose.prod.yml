@@ -8,7 +8,7 @@ services:
     labels:
       - traefik.enable=false
 
-  be:
+  lpv-adb-be:
     environment:
       - spring.profiles.active=prod
       - POSTGRES_PASSWORD=${LPV_DB_PASS}
