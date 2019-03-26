@@ -41,5 +41,13 @@ services:
       - REACT_APP_API_ENDPOINT=http://localhost:9991
     restart: always
 
+  lpv-static-site:
+    image: lovepetveteriner/lpv-static-site:latest
+    ports:
+      - "9993:80"
+    expose:
+      - "80"
+    restart: always
+
 volumes:
   db-data:

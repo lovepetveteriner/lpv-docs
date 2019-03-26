@@ -33,6 +33,15 @@ services:
       - traefik.docker.network=proxy
       - traefik.port=5000
 
+  lpv-static-site:
+    networks:
+      - proxy
+    labels:
+      - traefik.backend=site
+      - traefik.frontend.rule=Host:www.lovepetveteriner.com, site.lovepetveteriner.com
+      - traefik.docker.network=proxy
+      - traefik.port=80
+
   rp:
     image: traefik:1.7.3-alpine
     command: --api --docker  # Enables the web UI and tells Traefik to listen to docker
