@@ -29,7 +29,7 @@ services:
       - proxy
     labels:
       - traefik.backend=ui
-      - traefik.frontend.rule=Host:app.lovepetveteriner.com, lovepetveteriner.com
+      - traefik.frontend.rule=Host:app.lovepetveteriner.com
       - traefik.docker.network=proxy
       - traefik.port=5000
 
@@ -38,7 +38,7 @@ services:
       - proxy
     labels:
       - traefik.backend=site
-      - traefik.frontend.rule=Host:www.lovepetveteriner.com, site.lovepetveteriner.com
+      - traefik.frontend.rule=Host:www.lovepetveteriner.com, lovepetveteriner.com
       - traefik.docker.network=proxy
       - traefik.port=80
 
