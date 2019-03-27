@@ -23,7 +23,8 @@ services:
       - "8080"
     # depends_on:
     #   - db
-    # environment:
+    environment:
+      - LPV_MAIL_PASSWORD=${LPV_MAIL_PASSWORD}
     #   - JDBC_DATABASE_URL=jdbc:postgresql://db:5432/postgres
     #   - JDBC_DATABASE_USERNAME=postgres
     #   - JDBC_DATABASE_PASSWORD=lpvpass
