@@ -8,3 +8,11 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d ui rp
 
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml ps
 ```
+
+#### environment variables
+
+```shell
+vim ~/.bashrc
+export LPV_DB_PASS=<password>
+export LPV_MAIL_PASSWORD=<password>
+```

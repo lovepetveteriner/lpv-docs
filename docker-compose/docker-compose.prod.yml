@@ -3,6 +3,8 @@ version: '3'
 services:
 
   db:
+    environment:
+      - MYSQL_PASSWORD=${LPV_DB_PASS}
     networks:
       - internal
     labels:
@@ -11,7 +13,7 @@ services:
   lpv-adb-be:
     environment:
       - spring.profiles.active=prod
-      - POSTGRES_PASSWORD=${LPV_DB_PASS}
+      - JDBC_DATABASE_PASSWORD=${LPV_DB_PASS}
     networks:
       - internal
       - proxy
