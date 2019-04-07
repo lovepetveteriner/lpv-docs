@@ -27,7 +27,7 @@ services:
       - db
     environment:
       - LPV_MAIL_PASSWORD=${LPV_MAIL_PASSWORD}
-      - JDBC_DATABASE_URL=jdbc:mysql://db:3306/lpv_db
+      - JDBC_DATABASE_URL=jdbc:mysql://db:3306/lpv_adb
       - JDBC_DATABASE_USERNAME=lpv
       - JDBC_DATABASE_PASSWORD=lpv_dev_pass
     restart: always
