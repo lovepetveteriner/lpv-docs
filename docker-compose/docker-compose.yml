@@ -12,6 +12,7 @@ services:
       - MYSQL_DATABASE=lpv_adb
       - MYSQL_USER=lpv
       - MYSQL_PASSWORD=lpv_dev_pass
+      - MYSQL_ROOT_PASSWORD=lpv_dev_root_pass
     volumes:
       - db-data:/var/lib/mysql
     restart: always

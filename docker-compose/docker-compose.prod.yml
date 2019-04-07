@@ -5,6 +5,7 @@ services:
   db:
     environment:
       - MYSQL_PASSWORD=${LPV_DB_PASS}
+      - MYSQL_ROOT_PASSWORD=${LPV_DB_ROOT_PASS}
     networks:
       - internal
     labels:
